@@ -27,8 +27,8 @@
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="/assets/css/base.css" />
     <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/utilities.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- TITLE -->
     <title>PLENARIA SEGUROS</title>
@@ -68,10 +68,41 @@
       </nav>
     </header>
     <main>
-        <!-- Hero Section -->
-        <section></section>
-        <!-- Empresas Section -->
-        <section></section>
+      <!-- Hero Section -->
+      <section class="hero">
+        <!-- Video de fondo -->
+        <video
+          class="hero__video lazy-video"
+          muted
+          autoplay
+          loop
+          playsinline
+          poster="/assets/img/video/People_Business.jpg"
+        >
+          <source
+            src="/assets/img/video/People_Business.webm"
+            type="video/webm"
+          />
+        </video>
+
+        <!-- Capa de oscurecimiento opcional -->
+        <div class="hero__overlay"></div>
+
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">Plenaria Seguros para tu empresa</h1>
+            <div class="hero__subtitle">
+              <p>
+                Tenemos los mejores productos que se adaptan a todo tipo de
+                empresas
+              </p>
+              <span>Contratá de forma ágil, simple y segura.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Empresas Section -->
+      <section></section>
     </main>
     <footer></footer>
   </body>

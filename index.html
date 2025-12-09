@@ -27,8 +27,9 @@
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="/assets/css/base.css" />
     <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/utilities.css" />
+    <link rel="stylesheet" href="/assets/css/form.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- TITLE -->
     <title>PLENARIA SEGUROS</title>
@@ -68,16 +69,92 @@
       </nav>
     </header>
     <main>
-        <!-- Hero Section -->
-        <section></section>
-        <!-- Intro Section -->
-        <section></section>
-        <!-- Banner Section -->
-        <section></section>
-        <!-- Testimonials Section -->
-        <section></section>
-        <!-- Products Section -->
-        <section></section>
+      <!-- Hero Section -->
+      <section class="hero">
+        <video
+          class="hero__video lazy-video"
+          muted
+          autoplay
+          loop
+          playsinline
+          poster="/assets/img/video/Family.jpg"
+        >
+          <source src="/assets/img/video/Family.webm" type="video/webm" />
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">Seguros de Personas</h1>
+            <div class="hero__subtitle">
+              <p>
+                Protegé lo que más valorás con la tranquilidad de contar con un
+                respaldo sólido en cada etapa de tu vida.
+              </p>
+              <span>Contratá de forma ágil, simple y segura.</span>
+            </div>
+          </div>
+          <form
+            class="form"
+            action="https://formspree.io/f/XXXXX"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="form__group">
+              <label for="nombre">Nombre completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+                minlength="3"
+              />
+            </div>
+            <div class="form__group">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tunombre@ejemplo.com"
+                required
+              />
+            </div>
+            <div class="form__group">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="11-0000-0000"
+                required
+                pattern="^\d{2}[- ]?\d{4}[- ]?\d{4}$"
+              />
+            </div>
+            <div class="form__group">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder=""
+                maxlength="300"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">¡Quiero que me contacten!</button>
+            <p id="formSuccess" class="success-message" style="display: none">
+              ¡Gracias! Pronto nos pondremos en contacto.
+            </p>
+          </form>
+        </div>
+      </section>
+      <!-- Intro Section -->
+      <section></section>
+      <!-- Banner Section -->
+      <section></section>
+      <!-- Testimonials Section -->
+      <section></section>
+      <!-- Products Section -->
+      <section></section>
     </main>
     <footer></footer>
     <script src="/assets/js/script.js"></script>

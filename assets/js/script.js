@@ -26,6 +26,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  const form = document.getElementById("contactForm");
+  const success = document.getElementById("formSuccess");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      form.reset();
+      success.style.display = "block";
+    } else {
+      alert("Hubo un error al enviar el formulario. Intenta nuevamente.");
+    }
+  });
+
+
   // === AOS ==========================================================
   if (window.AOS) {
     AOS.init();

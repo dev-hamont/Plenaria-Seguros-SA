@@ -1,0 +1,63 @@
+/* FORMULARIO */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.form__group {
+  text-align: left;
+}
+
+.form__group label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--focus-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(227, 27, 37, 0.15);
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form button {
+  background-color: var(--primary-color);
+  color: var(--surface-color);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.form button:hover {
+  background-color: var(--hover-color);
+}
+
