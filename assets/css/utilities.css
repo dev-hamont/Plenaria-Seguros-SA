@@ -3,8 +3,7 @@
     url("/assets/img/bg.webp") center/cover no-repeat;
   margin: 2rem;
   border-radius: 2rem;
-  overflow: hidden;
-  position: relative;
+  overflow: visible;
 }
 
 .title h2 {
