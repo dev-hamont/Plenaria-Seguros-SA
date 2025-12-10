@@ -69,8 +69,6 @@
 
 .intro {
   text-align: center;
-  padding: var(--spacing-lg) var(--spacing-md);
-  margin: 2rem;
 }
 
 /* ===========================
@@ -79,11 +77,9 @@
 
 
 .banner {
-  padding: var(--spacing-xl) 0;
   background-color: var(--background-color);
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  margin: 2rem;
 }
 
 .banner__wrapper {
@@ -131,12 +127,6 @@
   text-align: center;
   margin: 2rem;
   border-radius: 2rem;
-}
-
-.testimonials__title {
-  font-size: 1.2em;
-  color: var(--text-color);
-  margin: var(--spacing-lg) 0;
 }
 
 .testimonials__carousel {
@@ -301,13 +291,9 @@
     padding: var(--spacing-md) 0;
   }
 
-  .testimonials__title {
-    margin-bottom: 5rem;
-  }
-
   .testimonials__carousel {
     max-width: 80%;
-    margin: 0 auto;
+    margin: var(--spacing-lg) auto;
     padding: var(--spacing-lg);
     position: relative;
   }

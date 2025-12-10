@@ -12,7 +12,7 @@
   --secondary-color: #072A60;
 
   /* COMPLEMENTARY TONES */
-  --accent-color: #82b0f5;
+  --accent-color: #F5F7FA;
   --background-color: #FAF9F7;
   --surface-color: #FFFFFF;
 
@@ -25,14 +25,13 @@
   --hover-color: #093C8E;
   --focus-color: #ec252f;
 
-  /* SEMANTIC STATES */
-  --neutral-color: #2f31a0;
-  --error-color: #C73E3E;
-  --info-color: #0C6EFD;
-
   /* TYPOGRAPHY SETTINGS */
   --font-family-base: "Nunito", sans-serif;
-  --font-size-base: 1rem;
+  --font-size-xs: 0.25rem;
+  --font-size-sm: 0.5rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 4rem;
 
   /* SPACING & DIMENSIONS */
   --container-width: 1200px;
@@ -49,8 +48,6 @@
 
   /* LAYERING */
   --z-nav: 1000;
-  --z-modal: 2000;
-  --z-tooltip: 3000;
 }
 
 /* BASIC STYLES */

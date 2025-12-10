@@ -1,13 +1,26 @@
 .background-section {
   background: 
     url("/assets/img/bg.webp") center/cover no-repeat;
-  margin: 2rem;
+  margin: var(--spacing-lg);
   border-radius: 2rem;
   overflow: visible;
 }
 
-.title h2 {
-  font-size: 2.2rem;
-  color: var(--secondary-color);
+.section-box {
+  margin: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.title {
+  font-size: calc(var(--font-size-md) * 1.5);
+  font-weight: 700;
   margin-bottom: var(--spacing-md);
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-size-lg);
+  }
+
 }
