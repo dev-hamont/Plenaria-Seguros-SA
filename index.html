@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="/assets/css/layout.css" />
     <link rel="stylesheet" href="/assets/css/form.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- TITLE -->
     <title>PLENARIA SEGUROS</title>
 </head>
@@ -64,7 +68,7 @@
             </video>
             <div class="hero__overlay"></div>
             <div class="hero__container">
-                <div class="hero__content">
+                <div class="hero__content animate__animated animate__fadeInLeft">
                     <h1 class="hero__title">Seguros de Personas</h1>
                     <div class="hero__subtitle">
                         <p>
@@ -74,7 +78,7 @@
                         <span>Contratá de forma ágil, simple y segura.</span>
                     </div>
                 </div>
-                <form class="form" action="https://formspree.io/f/XXXXX" method="POST" id="contactForm">
+                <form class="form animate__animated animate__fadeInRight" action="https://formspree.io/f/XXXXX" method="POST" id="contactForm">
                     <div class="form__group">
                         <label for="nombre">Nombre completo</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="3" />
@@ -240,7 +244,53 @@
                 </div>
             </section>
             <!-- Products Section -->
-            <section></section>
+            <section class="products section-box" data-aos="fade-up">
+                <div class="container">
+                    <div class="products__title">
+                        <div class="title">
+                            Protección que te acompaña siempre
+                        </div>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="products-card">
+                            <img src="/assets/img/people/people-A.webp" loading="lazy"
+                                alt="Vida Individual" class="products-card__img">
+                            <span class="products-card__title">Vida Individual</span>
+                        </div>
+
+                        <div class="products-card">
+                            <img src="/assets/img/people/people-B.webp" loading="lazy"
+                                alt="Vida Colectivo + Salud" class="products-card__img">
+                            <span class="products-card__title">Vida Colectivo + Salud</span>
+                        </div>
+
+                        <div class="products-card">
+                            <img src="/assets/img/people/people-C.webp" loading="lazy"
+                                alt="Vida Obligatorio" class="products-card__img">
+                            <span class="products-card__title">Vida Obligatorio</span>
+                        </div>
+
+                        <div class="products-card">
+                            <img src="/assets/img/people/people-D.webp" loading="lazy"
+                                alt="Vida Colectivo + Trabajo" class="products-card__img">
+                            <span class="products-card__title">Vida Colectivo + Trabajo</span>
+                        </div>
+
+                        <div class="products-card">
+                            <img src="/assets/img/people/people-E.webp" loading="lazy"
+                                alt="Accidentes Personales" class="products-card__img">
+                            <span class="products-card__title">Accidentes Personales</span>
+                        </div>
+
+                        <div class="products-card">
+                            <img src="/assets/img/people/people-F.webp" loading="lazy"
+                                alt="Sepelio" class="products-card__img">
+                            <span class="products-card__title">Sepelio</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
     <footer>

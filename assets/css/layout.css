@@ -123,10 +123,7 @@
    =========================== */
 
 .testimonials {
-  padding: 0 var(--spacing-md);
   text-align: center;
-  margin: 2rem;
-  border-radius: 2rem;
 }
 
 .testimonials__carousel {
@@ -224,6 +221,17 @@
   right: 1rem;
 }
 
+/* ===========================
+   SECCIÓN - PRODUCTOS
+   =========================== */
+
+.products {
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-color);
+}
+
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
@@ -287,10 +295,6 @@
 /* ===========================
    SECCIÓN - TESTIMONIOS
    =========================== */
-  .testimonials {
-    padding: var(--spacing-md) 0;
-  }
-
   .testimonials__carousel {
     max-width: 80%;
     margin: var(--spacing-lg) auto;
