@@ -232,6 +232,14 @@
   background-color: var(--background-color);
 }
 
+/* ===========================
+   SECCIÓN - PRODUCTOS
+   =========================== */
+
+.empresas {
+  display: flex;
+  justify-content: center;
+}
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
