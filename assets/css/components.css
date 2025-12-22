@@ -479,8 +479,8 @@ footer {
 
 /* ---------- LADO POSTERIOR ---------- */
 .card-flip__back {
-  background-color: var(--surface-color);
-  color: var(--text-color);
+  background-color: var(--primary-color);
+  color: var(--surface-color);
   transform: rotateY(180deg);
 }
 

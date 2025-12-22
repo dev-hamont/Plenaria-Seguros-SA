@@ -49,34 +49,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // === TESTIMONIALS CAROUSEL ==========================================
-  const testimonialCards = document.querySelectorAll('.testimonials__card');
-  const prevButton = document.querySelector('.testimonials__carousel-btn.prev');
-  const nextButton = document.querySelector('.testimonials__carousel-btn.next');
+  // === PRODUCTS CAROUSEL ==========================================
+  const productsCards = document.querySelectorAll('.products__card');
+  const prevButton = document.querySelector('.products__carousel-btn.prev');
+  const nextButton = document.querySelector('.products__carousel-btn.next');
 
-  if (testimonialCards.length && prevButton && nextButton) {
+  if (productsCards.length && prevButton && nextButton) {
     let currentIndex = 0;
 
     function updateCarousel() {
-      testimonialCards.forEach((card, index) => {
+      productsCards.forEach((card, index) => {
         card.classList.remove('active', 'prev', 'next');
         if (index === currentIndex) {
           card.classList.add('active');
-        } else if (index === (currentIndex - 1 + testimonialCards.length) % testimonialCards.length) {
+        } else if (index === (currentIndex - 1 + productsCards.length) % productsCards.length) {
           card.classList.add('prev');
-        } else if (index === (currentIndex + 1) % testimonialCards.length) {
+        } else if (index === (currentIndex + 1) % productsCards.length) {
           card.classList.add('next');
         }
       });
     }
 
     prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + testimonialCards.length) % testimonialCards.length;
+      currentIndex = (currentIndex - 1 + productsCards.length) % productsCards.length;
       updateCarousel();
     });
 
     nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % testimonialCards.length;
+      currentIndex = (currentIndex + 1) % productsCards.length;
       updateCarousel();
     });
 

@@ -75,103 +75,92 @@
    SECCIÓN - BANNER
    =========================== */
 
-
 .banner {
   background-color: var(--background-color);
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
+  padding: 2rem;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  color: var(--primary-color);
 }
 
-.banner__wrapper {
+.banner-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-xl);
-  text-align: center;
+  gap: calc(var(--spacing-xl) * 2);
+  border-radius: 2rem;
+  padding: 2rem;
+  overflow: hidden;
 }
 
-.banner__image img {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
+
+.banner-card__visual {
+  position: relative;
+  height: 200px;
 }
 
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  font-size: var(--font-size-base);
+.banner-bg {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  width: 280px;
+  z-index: 1;
+  transition: transform 0.5s ease;
 }
 
-.benefits-list li {
-  background-color: var(--surface-color);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color);
-  transition: var(--transition);
+.banner-family {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  width: 220px;
+  z-index: 2;
+  transition: transform 0.5s ease;
 }
 
-.benefits-list li:hover {
-  background-color: var(--accent-color);
+.banner-card__content {
+  text-align: left;
 }
 
 /* ===========================
    SECCIÓN - TESTIMONIOS
    =========================== */
 
-.testimonials {
+.products {
   text-align: center;
 }
 
-.testimonials__carousel {
+.products__carousel {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  perspective: 1000px;
-  overflow: visible;
-  height: 400px;
+  height: auto;           /* importante */
+  min-height: 400px;
+  margin: var(--spacing-lg) auto;
 }
 
-.testimonials__card {
+.products__card {
   position: absolute;
   opacity: 0;
   transform: scale(0.8) translateX(100%);
   transition: var(--transition);
-  max-width: 280px;
+  max-width: 100%;
   min-height: 380px;
-  background: #fff;
+  background: var(--primary-color);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  color: var(--text-color);
+  color: var(--surface-color);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 2rem;
 }
 
-.testimonial__card-text {
-  font-style: italic;
-  color: var(--text-light);
-  margin-bottom: var(--spacing-md);
-  line-height: 1.5;
-  max-width: 90%;
-}
-
-.testimonial__card-author {
-  display: block;
-  font-weight: bold;
-  color: var(--secondary-color);
-  margin-top: var(--spacing-sm);
-}
 
 /* === Estados del carrusel === */
-.testimonials__card.active {
+.products__card.active {
   opacity: 1;
   transform: scale(1) translateX(0);
   z-index: 3;
@@ -181,23 +170,32 @@
   -o-transform: scale(1) translateX(0);
 }
 
-.testimonials__card.prev {
+.products__card.prev {
   opacity: 0.6;
   transform: scale(0.9) translateX(-120%);
   z-index: 2;
 }
 
-.testimonials__card.next {
+.products__card.next {
   opacity: 0.6;
   transform: scale(0.9) translateX(120%);
   z-index: 2;
 }
 
+.products__card-icon i {
+  font-size: 3.5rem;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  justify-content: center;
+}
+
 /* === Botones de control === */
-.testimonials__carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.products__carousel-btn {
+  position: static;          /* CLAVE */
   background: var(--primary-color);
   color: #fff;
   border: none;
@@ -206,31 +204,13 @@
   cursor: pointer;
   font-size: 1.5rem;
   transition: var(--transition);
-  z-index: 4;
   box-shadow: var(--box-shadow);
 }
 
-.testimonials__carousel-btn:hover {
+.products__carousel-btn:hover {
   background: var(--secondary-color);
 }
 
-.testimonials__carousel-btn.prev {
-  left: 1rem;
-}
-.testimonials__carousel-btn.next {
-  right: 1rem;
-}
-
-/* ===========================
-   SECCIÓN - PRODUCTOS
-   =========================== */
-
-.products {
-  text-align: center;
-  border-radius: 2rem;
-  box-shadow: var(--box-shadow);
-  background-color: var(--background-color);
-}
 
 /* ===========================
    SECCIÓN - PRODUCTOS
@@ -280,56 +260,62 @@
 /* ===========================
    SECCIÓN - BANNER
    =========================== */
-  .banner__wrapper {
+  .banner-card {
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: var(--spacing-xl);
-    text-align: left;
+    gap: 3rem;
   }
 
-  .banner__image img {
-    max-width: 380px;
+  .banner-card__visual {
+    flex: 0 0 40%;
+    height: 260px;
   }
 
-  .banner__text {
-    max-width: 480px;
+  .banner-card__content {
+    flex: 1;
   }
 
-  .banner__benefits {
-    font-size: 1.1rem;
+  /* Hover animation */
+  .banner-card:hover .banner-family {
+    transform: translateX(12px);
   }
+
+  .banner-card:hover .banner-bg {
+    transform: translateX(-12px);
+  }
+
+
 
 /* ===========================
-   SECCIÓN - TESTIMONIOS
+   SECCIÓN - PRODUCTOS
    =========================== */
-  .testimonials__carousel {
+  .products__title {
+    max-width: 70%;
+    margin: 0 auto;
+    line-height: 1;
+  }
+  
+   .products__carousel {
     max-width: 80%;
     margin: var(--spacing-lg) auto;
     padding: var(--spacing-lg);
     position: relative;
   }
 
-  .testimonials__carousel-btn.prev {
+  .products__carousel-btn.prev {
     left: var(--spacing-md);
   }
 
-  .testimonials__carousel-btn.next {
+  .products__carousel-btn.next {
     right: var(--spacing-md);
   }
 
-  .testimonials__card {
+  .products__card {
     max-width: 380px;
     min-height: 420px;
-    padding: var(--spacing-xl);
   }
 
-  .testimonial__card-text {
-   font-size: 1.2rem;
-   line-height: 1.6;
-  }
-
-  .testimonial__card-author {
-   font-size: 1.1rem;
+  .carousel-controls {
+    margin: var(--spacing-xl) 0 var(--spacing-md) 0;
   }
 }

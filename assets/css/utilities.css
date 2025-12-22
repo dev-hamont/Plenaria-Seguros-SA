@@ -1,13 +1,15 @@
 .background-section {
+  display: flex;
+  flex-direction: column;
   background: 
     url("/assets/img/bg.webp") center/cover no-repeat;
-  margin: var(--spacing-lg);
+  margin: var(--spacing-sm);
   border-radius: 2rem;
   overflow: visible;
 }
 
 .section-box {
-  margin: var(--spacing-lg);
+  margin: var(--spacing-sm);
   padding: var(--spacing-lg) var(--spacing-md);
 }
 
@@ -17,17 +19,23 @@
 }
 
 .title {
-  font-size: var(--font-size-md);
+  font-size: calc(var(--font-size-md) * 1.5);
   font-weight: bold;
-  margin-bottom: var(--spacing-md);
 }
 
 .subtitle {
-  font-size: var(--font-size-md);
+  font-size: calc(var(--font-size-md) * 1.5);
+  color: var(--text-color);
 }
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
+  .section-box {
+    margin: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+
   .block-title {
     max-width: 600px;
     width: 100%;
@@ -38,6 +46,6 @@
   }
 
   .subtitle {
-    font-size: calc(var(--font-size-md) * 1.2);
+    font-size: var(--font-size-lg);
   }
 }
