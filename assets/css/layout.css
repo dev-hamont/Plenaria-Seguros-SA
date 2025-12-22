@@ -62,15 +62,6 @@
   margin-bottom: var(--spacing-lg);
 }
 
-
-/* ===========================
-   SECCIÓN - INTRODUCCIÓN
-   =========================== */
-
-.intro {
-  text-align: center;
-}
-
 /* ===========================
    SECCIÓN - BANNER
    =========================== */
@@ -123,7 +114,7 @@
 }
 
 /* ===========================
-   SECCIÓN - TESTIMONIOS
+   SECCIÓN - PRODUCTOS
    =========================== */
 
 .products {
@@ -135,7 +126,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;           /* importante */
+  height: auto;
   min-height: 400px;
   margin: var(--spacing-lg) auto;
 }
@@ -195,7 +186,7 @@
 
 /* === Botones de control === */
 .products__carousel-btn {
-  position: static;          /* CLAVE */
+  position: static;
   background: var(--primary-color);
   color: #fff;
   border: none;
@@ -211,14 +202,28 @@
   background: var(--secondary-color);
 }
 
-
 /* ===========================
-   SECCIÓN - PRODUCTOS
+   SECCIÓN - NOSOTROS
    =========================== */
 
-.empresas {
-  display: flex;
-  justify-content: center;
+.map-section {
+  text-align: center;
+}
+
+.contacto__map {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.contacto__map iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 /* RESPONSIVE */
@@ -317,5 +322,12 @@
 
   .carousel-controls {
     margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+  }
+
+/* ===========================
+   SECCIÓN - PRODUCTOS
+   =========================== */
+  .contacto__map iframe {
+    height: 300px;
   }
 }

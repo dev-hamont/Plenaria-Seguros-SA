@@ -406,7 +406,7 @@ footer {
 .card-flip {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
   justify-items: center;
   padding: var(--spacing-md) 0;
 }
@@ -415,6 +415,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--surface-color);
 }
 .card-flip__container {
   perspective: 1000px;
@@ -522,9 +526,10 @@ footer {
   padding-left: 1.2rem;
 }
 
-.card-flip__extra .btn {
+.card-flip__extra a {
   width: 100%; /* mismo ancho que los beneficios */
   text-align: center;
+  font-weight: bold;
 }
 
 
@@ -672,9 +677,18 @@ footer {
    =========================== */
   .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-lg);
   }
+
+  .cards--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cards--5 {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
 
   .card__container {
     padding: var(--spacing-lg);
@@ -710,7 +724,6 @@ footer {
   .card-flip {
     grid-template-columns: 1fr; /* una columna, items apilados */
     justify-content: center;
-    gap: var(--spacing-xl);
   }
 
   .card-flip__item {
@@ -720,10 +733,7 @@ footer {
     max-width: 900px;
     margin: 0 auto;
     width: 100%;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
     padding: var(--spacing-lg);
-    background-color: var(--surface-color);
   }
 
   .card-flip__extra {
