@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/utilities.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- TITLE -->
   <title>PLENARIA SEGUROS</title>
 </head>
@@ -57,45 +58,53 @@
   </header>
   <main>
     <!-- Hero Section -->
-    <section></section>
+    <section class="hero-aux">
+      <div class="hero__overlay"></div>
+      <div class="hero__container">
+        <div class="hero__content animate__animated animate__fadeInLeft">
+          <h1 class="hero__title">Nosotros</h1>
+          <div class="hero__subtitle">
+            <p>
+              Desde hace más de 30 años, acompañando y cuidando a las personas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Nosotros Section -->
     <section class="background-section">
-      <section class="nosotros section-box">
+      <section class="nosotros section-box" data-aos="fade-up">
         <div class="container">
-          <div class="title">Nosotros</div>
-            <p class="nosotros__text">
-              <div>
+          <div class="title">Acerca de la Compañía</div>
+            <div class="nosotros__text">
+              <p>
                 Somos una aseguradora nacional especializada en Coberturas de Personas,
                 con una amplia trayectoria y presencia en todo el país. Desde el inicio
                 trabajamos con un compromiso claro: brindar protección y respaldo a cada
                 persona, familia u organización que confía en nosotros.
-              </div>
-              <div>
+
                 Ofrecemos una variedad de coberturas —Vida Individual y Colectivo, Salud,
                 Accidentes Personales y Sepelio— junto con soluciones combinadas que se
                 adaptan a las necesidades de cada región y actividad. Estamos presentes
                 en Capital Federal, el interior de Buenos Aires y provincias como Córdoba,
                 Santa Fe, La Pampa, Jujuy, entre otras, con un crecimiento constante.
-              </div>
-              <div>
+              </p>
+              <p>
                 Desarrollamos productos especiales para cooperativas, empresas, organismos
                 públicos, fuerzas de seguridad y distintos grupos de afinidad, comprendiendo
                 las realidades y economías regionales para ofrecer coberturas acordes a cada
                 comunidad.
-              </div>
-              <div>
+  
                 Creemos en la excelencia, por eso capacitamos permanentemente a nuestro
                 personal y equipos de venta, fortaleciendo la calidad del servicio.
-              </div>
-              <div>
                 Evolucionamos y crecemos con la misma convicción que nos guía desde siempre:
                 ofrecer tranquilidad y soluciones a medida.
-              </div>
-            </p>
+              </p>
+            </div>
           </div>
       </section>
       <!-- SECCIÓN VALORES -->
-      <section class="valores-section section-box">
+      <section class="valores-section" data-aos="fade-up">
         <div class="container">
           <div class="title">Nuestros Valores</div>
           <div class="cards cards--5">
@@ -121,7 +130,7 @@
             </div>
             <div class="card__container">
               <div class="card__media">
-                <a href="#"><i class="fas fa-wallet"></i></a>
+                <a href="#"><i class="fas fa-hands-helping"></i></a>
               </div>
               <div class="card__text">
                 <span><strong>Trabajo en Equipo</strong></span>
@@ -130,7 +139,7 @@
             </div>
             <div class="card__container">
               <div class="card__media">
-                <a href="#"><i class="fas fa-shield-alt"></i></a>
+                <a href="#"><i class="fas fa-award"></i></a>
               </div>
               <div class="card__text">
                 <span><strong>Experiencia</strong></span>
@@ -154,8 +163,9 @@
       <section class="partners">
       </section>
       <!-- Location Section -->
-      <section class="map-section section-box">
+      <section class="map-section section-box" data-aos="fade-up">
         <div class="container">
+          <div class="title">Nuestra Ubicación</div>
           <div class="contacto__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1235543771018!2d-58.37527615462646!3d-34.60103708305196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace338c80df%3A0xd799834d9e352dd4!2sPlenaria%20Seguros%20S.A!5e0!3m2!1ses!2sar!4v1763392491458!5m2!1ses!2sar"

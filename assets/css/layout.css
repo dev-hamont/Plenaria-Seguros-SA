@@ -2,9 +2,9 @@
    SECCIÓN - HERO
    =========================== */
 
-.hero {
+.hero,
+.hero-aux {
   position: relative;
-  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +13,10 @@
   overflow: hidden;
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
+}
+
+.hero {
+  min-height: 90vh;
 }
 
 .hero__video {
@@ -146,7 +150,12 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
+}
+
+.products__card-subtitle {
+  font-size: calc(var(--font-size-md) * 1.3);
 }
 
 
@@ -163,13 +172,13 @@
 
 .products__card.prev {
   opacity: 0.6;
-  transform: scale(0.9) translateX(-120%);
+  transform: scale(0.9) translateX(-100%);
   z-index: 2;
 }
 
 .products__card.next {
   opacity: 0.6;
-  transform: scale(0.9) translateX(120%);
+  transform: scale(0.9) translateX(100%);
   z-index: 2;
 }
 
@@ -177,37 +186,15 @@
   font-size: 3.5rem;
 }
 
-.carousel-controls {
-  display: flex;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
-  justify-content: center;
-}
-
-/* === Botones de control === */
-.products__carousel-btn {
-  position: static;
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: var(--transition);
-  box-shadow: var(--box-shadow);
-}
-
-.products__carousel-btn:hover {
-  background: var(--secondary-color);
-}
-
 /* ===========================
    SECCIÓN - NOSOTROS
    =========================== */
 
-.map-section {
-  text-align: center;
+.nosotros__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: justify;
 }
 
 .contacto__map {
@@ -215,6 +202,7 @@
   margin: 0 auto;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  margin-top: var(--spacing-lg);
 }
 
 .contacto__map iframe {
@@ -300,28 +288,28 @@
     line-height: 1;
   }
   
-   .products__carousel {
+  .products__carousel {
     max-width: 80%;
     margin: var(--spacing-lg) auto;
     padding: var(--spacing-lg);
     position: relative;
   }
-
-  .products__carousel-btn.prev {
-    left: var(--spacing-md);
-  }
-
-  .products__carousel-btn.next {
-    right: var(--spacing-md);
-  }
-
+  
   .products__card {
     max-width: 380px;
     min-height: 420px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  .carousel-controls {
-    margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+  .products__card.prev,
+  .products__card.next {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .products__card.prev:hover,
+  .products__card.next:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   }
 
 /* ===========================
@@ -329,5 +317,18 @@
    =========================== */
   .contacto__map iframe {
     height: 300px;
+  }
+
+/* ===========================
+   SECCIÓN - NOSOTROS
+   =========================== */
+  .nosotros__text {
+    margin-top: var(--spacing-lg);
+  }
+
+  .nosotros__text p {
+    font-size: calc(var(--font-size-md) * 1.4);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
   }
 }

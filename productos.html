@@ -59,257 +59,195 @@
   </header>
   <main>
     <!-- Hero Section -->
-    <section class="hero">
-      <!-- Video de fondo -->
-      <video class="hero__video lazy-video" muted autoplay loop playsinline
-        poster="./assets/img/video/People_Business.jpg">
-        <source src="./assets/img/video/People_Business.webm" type="video/webm" />
-      </video>
+    <section class="hero-aux">
       <div class="hero__overlay"></div>
       <div class="hero__container">
         <div class="hero__content animate__animated animate__fadeInLeft">
-          <h1 class="hero__title">Plenaria Seguros para tu empresa</h1>
+          <h1 class="hero__title">Conocé nuestros productos</h1>
           <div class="hero__subtitle">
             <p>
-              Tenemos los mejores productos que se adaptan a todo tipo de
-              empresas
+              Creados para cuidar lo que importa en
+              tu presente y acompañarte con confianza hacia el mañana.
             </p>
-            <span>Contratá de forma ágil, simple y segura.</span>
           </div>
         </div>
-        <form class="form animate__animated animate__fadeInRight" action="https://formspree.io/f/xnnegnwv" method="POST"
-          id="contactForm">
-          <div class="form__group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="3" />
-          </div>
-          <div class="form__group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tunombre@ejemplo.com" required />
-          </div>
-          <div class="form__group">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="11-0000-0000" required
-              pattern="^\d{2}[- ]?\d{4}[- ]?\d{4}$" />
-          </div>
-          <div class="form__group">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="" maxlength="300"></textarea>
-          </div>
-          <button type="submit" class="btn">¡Quiero que me contacten!</button>
-          <p id="formSuccess" class="success-message" style="display: none">
-            ¡Gracias! Pronto nos pondremos en contacto.
-          </p>
-        </form>
       </div>
     </section>
-    <!-- Empresas Section -->
+    <!-- Products Section -->
     <section class="background-section">
-      <section class="card-flip" data-aos="fade-up">
-        <div class="title block-title">
-          Conocé nuestros productos, creados para cuidar lo que importa en
-          tu presente y acompañarte con confianza hacia el mañana.
-        </div>
+      <section class="products-grid" data-aos="fade-up">
         <div class="container">
-          <!-- Vida Individual -->
-          <div class="card-flip__item section-box">
-            <div class="card-flip__container" style="--bg-image: url('/assets/img/people/people-A.webp')">
-              <div class="card-flip__inner">
-                <div class="card-flip__front">
-                  <div class="card-flip__description">
-                    <span>Vida Individual</span>
+          <div class="products-grid__container">
+            <!-- Card-Flip -->
+              <div class="card-flip__container">
+                <div class="card-flip__inner">
+                  <!-- Front Card-Flip -->
+                  <div class="card-flip__front">
+                    <div class="card-flip__description">
+                      <div class="products__card-icon">
+                        <i class="fas fa-heartbeat"></i>
+                      </div>
+                      <div class="products__card-title title">
+                        Vida Individual
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Back Card-Flip -->
+                  <div class="card-flip__back">
+                    <div class="card-flip__description">
+                      <p>
+                        Protegé a quienes más querés con una cobertura diseñada para
+                        acompañarte en cada etapa de la vida. Ante un imprevisto,
+                        tus beneficiarios reciben un respaldo económico que
+                        garantiza su bienestar y tranquilidad.
+                      </p>
+                      <a href="./personas.html" class="btn">Para Personas</a>
+                    </div>
                   </div>
                 </div>
-                <div class="card-flip__back">
-                  <div class="card-flip__description">
-                    <p>
-                      Protegé a quienes más querés con una cobertura diseñada para
-                      acompañarte en cada etapa de la vida. Ante un imprevisto,
-                      tus beneficiarios reciben un respaldo económico que
-                      garantiza su bienestar y tranquilidad.
-                    </p>
+              </div>
+            <!-- Card-Flip -->
+              <div class="card-flip__container">
+                <div class="card-flip__inner">
+                  <!-- Front Card-Flip -->
+                  <div class="card-flip__front">
+                    <div class="card-flip__description">
+                      <div class="products__card-icon">
+                        <i class="fas fa-user-check"></i>
+                      </div>
+                      <div class="products__card-title title">
+                        Vida Obligatorio
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Back Card-Flip -->
+                  <div class="card-flip__back">
+                    <div class="card-flip__description">
+                      <p>
+                        Cumplí con la normativa y protegé a tu equipo. Este seguro
+                        garantiza una indemnización a los beneficiarios del
+                        trabajador en caso de fallecimiento, ofreciendo respaldo
+                        inmediato y tranquilidad para la empresa y sus empleados.
+                      </p>
+                      <a href="./empresas.html">Para empresas</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Card-Flip -->
+              <div class="card-flip__container">
+                <div class="card-flip__inner">
+                  <!-- Front Card-Flip -->
+                  <div class="card-flip__front">
+                    <div class="card-flip__description">
+                      <div class="products__card-icon">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <div class="products__card-title title">
+                        Vida Colectivo + Salud
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Back Card-Flip -->
+                  <div class="card-flip__back">
+                    <div class="card-flip__description">
+                      <p>
+                        Protegé a todo tu equipo con una sola póliza. Brinda
+                        respaldo económico a los empleados y sus familias ante
+                        fallecimiento o invalidez, fortaleciendo el bienestar
+                        laboral y el compromiso dentro de la empresa.
+                      </p>
+                      <a href="./empresas.html">Para empresas</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Card-Flip -->
+              <div class="card-flip__container">
+                <div class="card-flip__inner">
+                  <!-- Front Card-Flip -->
+                  <div class="card-flip__front">
+                    <div class="card-flip__description">
+                      <div class="products__card-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <div class="products__card-title title">
+                        Vida Colectivo + Trabajo
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Back Card-Flip -->
+                  <div class="card-flip__back">
+                    <div class="card-flip__description">
+                      <p>
+                        Protegé a todo tu equipo con una sola póliza. Brinda
+                        respaldo económico a los empleados y sus familias ante
+                        fallecimiento o invalidez, fortaleciendo el bienestar
+                        laboral y el compromiso dentro de la empresa.
+                      </p>
+                      <a href="./empresas.html">Para empresas</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Card-Flip -->
+              <div class="card-flip__container">
+                <div class="card-flip__inner">
+                  <!-- Front Card-Flip -->
+                  <div class="card-flip__front">
+                    <div class="card-flip__description">
+                      <div class="products__card-icon">
+                        <i class="fas fa-user-injured"></i>
+                      </div>
+                      <div class="products__card-title title">
+                        Accidentes Personales
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Back Card-Flip -->
+                  <div class="card-flip__back">
+                    <div class="card-flip__description">
+                      <p>
+                        Protección inmediata frente a lesiones o imprevistos que
+                        puedan ocurrir en tu vida diaria o laboral. Ante un
+                        accidente, recibís un respaldo económico que te permite
+                        enfocarte en tu recuperación con tranquilidad.
+                      </p>
+                      <a href="./personas.html">Para personas</a>
+                      <a href="./empresas.html">Para empresas</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Card-Flip -->
+              <div class="card-flip__container">
+                <div class="card-flip__inner">
+                  <!-- Front Card-Flip -->
+                  <div class="card-flip__front">
+                    <div class="card-flip__description">
+                      <div class="products__card-icon">
+                        <i class="fas fa-cross"></i>
+                      </div>
+                      <div class="products__card-title title">
+                        Sepelio
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Back Card-Flip -->
+                  <div class="card-flip__back">
+                    <div class="card-flip__description">
+                      <p>
+                        Un respaldo económico para acompañar a tu familia en los
+                        momentos más difíciles. Brinda una ayuda inmediata para
+                        cubrir gastos de servicio fúnebre y trámites asociados.
+                      </p>
+                      <a href="./personas.html">Para personas</a>
+                      <a href="./empresas.html">Para empresas</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card-flip__extra">
-              <ul class="benefits-list">
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-              </ul>
-              <a href="./personas.html">Disponible para Personas</a>
-            </div>
-          </div>
-          <!-- Accidentes Personales -->
-          <div class="card-flip__item section-box">
-            <div class="card-flip__container" style="--bg-image: url('/assets/img/people/people-E.webp')">
-              <div class="card-flip__inner">
-                <div class="card-flip__front">
-                  <div class="card-flip__description">
-                    <span>Accidentes Personales</span>
-                  </div>
-                </div>
-                <div class="card-flip__back">
-                  <div class="card-flip__description">
-                    <p>
-                      Protección inmediata frente a lesiones o imprevistos que
-                      puedan ocurrir en tu vida diaria o laboral. Ante un
-                      accidente, recibís un respaldo económico que te permite
-                      enfocarte en tu recuperación con tranquilidad.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-flip__extra">
-              <ul class="benefits-list">
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-              </ul>
-              <a href="./personas.html">Para personas</a>
-              <a href="./empresas.html">Para empresas</a>
-            </div>
-          </div>
-          <!-- Vida Obligatorio -->
-          <div class="card-flip__item section-box">
-            <div class="card-flip__container" style="--bg-image: url('/assets/img/people/people-C.webp')">
-              <div class="card-flip__inner">
-                <div class="card-flip__front">
-                  <div class="card-flip__description">
-                    <span>Vida Obligatorio</span>
-                  </div>
-                </div>
-                <div class="card-flip__back">
-                  <div class="card-flip__description">
-                    <p>
-                      Cumplí con la normativa y protegé a tu equipo. Este seguro
-                      garantiza una indemnización a los beneficiarios del
-                      trabajador en caso de fallecimiento, ofreciendo respaldo
-                      inmediato y tranquilidad para la empresa y sus empleados.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-flip__extra">
-              <ul class="benefits-list">
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-              </ul>
-              <a href="./empresas.html">Para empresas</a>
-            </div>
-          </div>
-          <!-- Vida Colectivo + Salud -->
-          <div class="card-flip__item section-box">
-            <div class="card-flip__container" style="--bg-image: url('/assets/img/people/people-B.webp')">
-              <div class="card-flip__inner">
-                <div class="card-flip__front">
-                  <div class="card-flip__description">
-                    <span>Vida Colectivo + Salud</span>
-                  </div>
-                </div>
-                <div class="card-flip__back">
-                  <div class="card-flip__description">
-                    <p>
-                      Protegé a todo tu equipo con una sola póliza. Brinda
-                      respaldo económico a los empleados y sus familias ante
-                      fallecimiento o invalidez, fortaleciendo el bienestar
-                      laboral y el compromiso dentro de la empresa.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-flip__extra">
-              <ul class="benefits-list">
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-              </ul>
-              <a href="./empresas.html">Para empresas</a>
-            </div>
-          </div>
-          <!-- Vida Colectivo - Trabajo -->
-          <div class="card-flip__item section-box">
-            <div class="card-flip__container" style="--bg-image: url('/assets/img/people/people-D.webp')">
-              <div class="card-flip__inner">
-                <div class="card-flip__front">
-                  <div class="card-flip__description">
-                    <span>Vida Colectivo - Trabajo</span>
-                  </div>
-                </div>
-                <div class="card-flip__back">
-                  <div class="card-flip__description">
-                    <p>
-                      Protegé a todo tu equipo con una sola póliza. Brinda
-                      respaldo económico a los empleados y sus familias ante
-                      fallecimiento o invalidez, fortaleciendo el bienestar
-                      laboral y el compromiso dentro de la empresa.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-flip__extra">
-              <ul class="benefits-list">
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-              </ul>
-              <a href="./empresas.html">Para empresas</a>
-            </div>
-          </div>
-          <!-- Sepelio -->
-          <div class="card-flip__item section-box">
-            <div class="card-flip__container" style="--bg-image: url('/assets/img/people/people-F.webp')">
-              <div class="card-flip__inner">
-                <div class="card-flip__front">
-                  <div class="card-flip__description">
-                    <span>Sepelio</span>
-                  </div>
-                </div>
-                <div class="card-flip__back">
-                  <div class="card-flip__description">
-                    <p>
-                      Un respaldo económico para acompañar a tu familia en los
-                      momentos más difíciles. Brinda una ayuda inmediata para
-                      cubrir gastos de servicio fúnebre y trámites asociados.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-flip__extra">
-              <ul class="benefits-list">
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-                <li>✔ Beneficio económico inmediato ante fallecimiento.</li>
-                <li>✔ Posibilidad de agregar coberturas adicionales.</li>
-                <li>✔ Montos asegurados ajustables.</li>
-              </ul>
-              <a href="./personas.html">Para personas</a>
-              <a href="./empresas.html">Para empresas</a>
-            </div>
-          </div>
         </div>
       </section>
     </section>

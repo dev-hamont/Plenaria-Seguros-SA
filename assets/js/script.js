@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // === NAVBAR =========================================================
   const hamburger = document.querySelector('.hamburger');
   const navList = document.querySelector('.nav__list');
-  
+
   if (hamburger && navList) {
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
@@ -26,64 +26,73 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // === FORM ===========================================================
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
 
-  const form = document.getElementById("contactForm");
-  const success = document.getElementById("formSuccess");
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+      const data = new FormData(form);
 
-    const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: 'application/json' }
+      });
 
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { "Accept": "application/json" }
+      if (response.ok) {
+        form.reset();
+        success.style.display = 'block';
+      } else {
+        alert('Hubo un error al enviar el formulario. Intenta nuevamente.');
+      }
     });
+  }
 
-    if (response.ok) {
-      form.reset();
-      success.style.display = "block";
-    } else {
-      alert("Hubo un error al enviar el formulario. Intenta nuevamente.");
-    }
-  });
-
-  // === PRODUCTS CAROUSEL ==========================================
+  // === PRODUCTS CAROUSEL ==============================================
   const productsCards = document.querySelectorAll('.products__card');
-  const prevButton = document.querySelector('.products__carousel-btn.prev');
-  const nextButton = document.querySelector('.products__carousel-btn.next');
 
-  if (productsCards.length && prevButton && nextButton) {
+  if (productsCards.length) {
     let currentIndex = 0;
 
     function updateCarousel() {
       productsCards.forEach((card, index) => {
         card.classList.remove('active', 'prev', 'next');
+
         if (index === currentIndex) {
           card.classList.add('active');
-        } else if (index === (currentIndex - 1 + productsCards.length) % productsCards.length) {
+        } 
+        else if (index === (currentIndex - 1 + productsCards.length) % productsCards.length) {
           card.classList.add('prev');
-        } else if (index === (currentIndex + 1) % productsCards.length) {
+        } 
+        else if (index === (currentIndex + 1) % productsCards.length) {
           card.classList.add('next');
         }
       });
     }
 
-    prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + productsCards.length) % productsCards.length;
-      updateCarousel();
-    });
+    productsCards.forEach(card => {
+      card.addEventListener('click', () => {
+        if (card.classList.contains('prev')) {
+          currentIndex =
+            (currentIndex - 1 + productsCards.length) % productsCards.length;
+          updateCarousel();
+        }
 
-    nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % productsCards.length;
-      updateCarousel();
+        if (card.classList.contains('next')) {
+          currentIndex =
+            (currentIndex + 1) % productsCards.length;
+          updateCarousel();
+        }
+      });
     });
 
     updateCarousel();
   }
-  
-  // === AOS ==========================================================
+
+  // === AOS ============================================================
   if (window.AOS) {
     AOS.init();
   }
