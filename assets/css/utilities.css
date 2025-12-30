@@ -29,7 +29,7 @@
 /* RESPONSIVE */
 @media (min-width: 768px) {
   .section-box {
-    margin: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
     padding: var(--spacing-lg) var(--spacing-md);
   }
   

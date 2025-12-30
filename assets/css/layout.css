@@ -187,6 +187,60 @@
 }
 
 /* ===========================
+   SECCIÓN - MEDIA
+   =========================== */
+.media-section {
+  background-color: var(--background-color);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden; /* 🔑 */
+  padding: 0;       /* 🔑 elimina marco */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.media-card {
+  position: relative;
+  min-height: 420px;
+}
+
+/* CAPA DEL VIDEO */
+.media-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.media-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* 🔑 */
+  object-position: 50% 15%;
+  display: block;
+}
+
+/* OVERLAY OSCURO */
+.media-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+/* CONTENIDO (se mantiene tu clase) */
+.banner-card__content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 2rem;
+  max-width: 520px;
+}
+
+
+
+/* ===========================
    SECCIÓN - NOSOTROS
    =========================== */
 
@@ -214,8 +268,52 @@
   box-shadow: var(--box-shadow);
 }
 
+/* CARDS DE PRUEBA */
+.cta-section {
+  padding: 2rem 1rem;
+}
+
+.cta-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cta-card {
+  background: #eef9f8;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  min-height: 160px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+}
+
+
+
+
 /* RESPONSIVE */
 @media (min-width: 768px) {
+  .cta-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    grid-template-areas:
+      "a b b b"
+      "c c d d"
+      "e e e f";
+  }
+
+  .cta-card:nth-child(1) { grid-area: a; }
+  .cta-card:nth-child(2) { grid-area: b; }
+  .cta-card:nth-child(3) { grid-area: c; }
+  .cta-card:nth-child(4) { grid-area: d; }
+  .cta-card:nth-child(5) { grid-area: e; }
+  .cta-card:nth-child(6) { grid-area: f; }
+
+
+
 /* ===========================
    SECCIÓN - HERO
    =========================== */
@@ -317,6 +415,12 @@
    =========================== */
   .contacto__map iframe {
     height: 300px;
+  }
+/* ===========================
+   SECCIÓN - MEDIA
+   =========================== */
+  .media-card {
+    min-height: 420px;
   }
 
 /* ===========================
