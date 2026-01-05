@@ -75,6 +75,7 @@
     <main>
       <!-- Hero Section -->
       <section class="hero">
+        <!-- Hero-Video -->
         <video
           class="hero__video lazy-video"
           muted
@@ -85,8 +86,11 @@
         >
           <source src="./assets/img/video/Family.webm" type="video/webm" />
         </video>
+        <!-- Hero-Overlay -->
         <div class="hero__overlay"></div>
+        <!-- Hero-Container -->
         <div class="hero__container">
+          <!-- Hero-Content -->
           <div class="hero__content animate__animated animate__fadeInLeft">
             <h1 class="hero__title">Cuidamos a las personas</h1>
             <div class="hero__subtitle">
@@ -97,6 +101,7 @@
               <span>Contratá de manera simple y segura.</span>
             </div>
           </div>
+          <!-- Hero-Form -->
           <form
             class="form animate__animated animate__fadeInRight"
             action="https://formspree.io/f/xnnegnwv"
@@ -182,9 +187,13 @@
         <section class="products section-box" data-aos="fade-up">
           <div class="container">
             <div class="subtitle">
-              Conocé nuestros productos, creados para cuidar lo que importa en
-              tu presente y acompañarte con confianza hacia el mañana.
+              <strong
+                >Conocé nuestros productos, creados para cuidar lo que importa
+                en tu presente y acompañarte con confianza hacia el
+                mañana.</strong
+              >
             </div>
+            <!-- Products Carousel -->
             <div class="products__carousel">
               <!-- Product Card -->
               <div class="products__card active">
@@ -257,46 +266,44 @@
         <section class="intro section-box" data-aos="fade-up">
           <div class="container">
             <div class="intro__title">
-              <div class="title">¿Por qué elegir Plenaria Seguros?</div>
+              <div class="title text-center">
+                ¿Por qué elegir Plenaria Seguros?
+              </div>
             </div>
+            <!-- Flex-Cards-Block -->
             <div class="cards cards--4">
               <div class="card__container">
                 <div class="card__media">
-                  <a href="#"><i class="fas fa-file-alt"></i></a>
+                  <a href="#"><i class="fas fa-user-shield"></i></a>
                 </div>
                 <div class="card__text">
-                  <span>Denunciá tu siniestro</span>
-                  <span><strong>100% online</strong></span>
+                  <span>Especialización en seguros de personas</span>
                 </div>
               </div>
               <div class="card__container">
-                <div class="card__media"></div>
+                <div class="card__media">
+                  <a href="#"><i class="fas fa-layer-group"></i></a>
+                </div>
                 <div class="card__text">
                   <span>
-                    Acompañamos a nuestros clientes brindando
-                    <strong>soluciones personalizadas,</strong>
-                    para cuidar lo que más valoran.
+                    Productos adaptados a diferentes situaciones de vida
                   </span>
                 </div>
               </div>
               <div class="card__container">
                 <div class="card__media">
-                  <a href="#"><i class="fas fa-wallet"></i></a>
+                  <a href="#"><i class="fas fa-map-marked-alt"></i></a>
                 </div>
                 <div class="card__text">
-                  <span>
-                    Consulta nuestras <strong>preguntas frecuentes</strong>
-                    y conocé más.
-                  </span>
+                  <span> Atención en todo el territorio nacional </span>
                 </div>
               </div>
               <div class="card__container">
                 <div class="card__media">
-                  <a href="#"><i class="fas fa-shield-alt"></i></a>
+                  <a href="#"><i class="fas fa-hand-holding-usd"></i></a>
                 </div>
                 <div class="card__text">
-                  <span>Tu tranquilidad</span>
-                  <span><strong>al mejor precio</strong></span>
+                  <span>Tranquilidad y respaldo financiero</span>
                 </div>
               </div>
             </div>
@@ -312,35 +319,75 @@
                 alt="Familia disfrutando al aire libre"
               />
             </div>
-
-            <div class="container">
-              <div class="banner-card__content">
-                <div class="title">Plenaria Seguros</div>
-                <div class="subtitle">
-                  Desde hace más de 30 años, acompañando y cuidando a las
-                  personas.
-                </div>
-              </div>
+            <div class="media-card__content">
+              <div class="title">Desde hace más de 30 años,</div>
+              <div class="subtitle">acompañando y cuidando a las personas.</div>
             </div>
           </div>
         </section>
-
-        <!-- Cards de prueba -->
+        <!-- Grid-Cards -->
         <section class="cta-section" data-aos="fade-up">
           <div class="container">
             <div class="cta-grid">
+              <!-- CTA-WhatsApp -->
+              <article class="cta-card cta-card-padding card-border-opa">
+                <span class="cta-card__text"> Hablá con un asesor</span>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </article>
+              <!-- CTA-Faqs -->
+              <article
+                class="cta-card cta-card-padding cta-card--wide card-border"
+              >
+                <span class="cta-card__text">
+                  Consultá nuestras <strong>preguntas frecuentes</strong>
+                  y conocé más
+                </span>
+                <div class="cta-card__media">
+                  <img
+                    src="./assets/img/people/faq-persona.png"
+                    alt="Preguntas frecuentes Plenaria Seguros"
+                    loading="lazy"
+                  />
+                </div>
+              </article>
+              <!-- Media-Card -->
               <article class="cta-card">
-                Denunciá tu siniestro 100% online
+                <img
+                  class="media-image"
+                  src="./assets/img/people/family-living.webp"
+                  alt="Familia disfrutando al aire libre"
+                />
               </article>
-              <article class="cta-card cta-card--wide">
-                Conocé nuestro blog
+              <!-- Text-Card -->
+              <article class="cta-card cta-card-padding card-border-opa">
+                <span class="cta-card__text"
+                  >Acompañamos a nuestros clientes brindando
+                  <strong>soluciones personalizadas,</strong>
+                  para cuidar lo que más valoran.</span
+                >
               </article>
-
-              <article class="cta-card">Preguntas frecuentes</article>
-              <article class="cta-card">Portal Clientes</article>
-
-              <article class="cta-card cta-card--big">Life Advisor</article>
-              <article class="cta-card">Asesoramiento personalizado</article>
+              <!-- Text-Card -->
+              <article
+                class="cta-card cta-card-padding cta-card--big card-border"
+              >
+                <div class="cta-card__media">
+                  <img
+                    src="./assets/img/devices.png"
+                    alt="Notebook y Smartphone"
+                    loading="lazy"
+                  />
+                </div>
+                <span class="cta-card__text">
+                  Realizá tus gestiones online, sin trámites presenciales
+                </span>
+              </article>
+              <!-- CTA-Faqs -->
+              <article class="cta-card cta-card-padding card-border-opa">
+                <span class="cta-card__text">
+                  Conocé nuestras pautas de cobranzas</span
+                >
+                <a href="#"><i class="fas fa-dollar-sign"></i></a>
+              </article>
             </div>
           </div>
         </section>

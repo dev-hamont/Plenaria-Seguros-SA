@@ -25,6 +25,22 @@
   color: var(--text-color);
 }
 
+.card-border-opa {
+  background-color: rgba(228, 58, 78, 0.6);
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+}
+
+.card-border {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  box-shadow: var(--box-shadow);
+}
+
+.text-center {
+  text-align: center;
+}
+
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
