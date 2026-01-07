@@ -437,11 +437,13 @@ footer {
   border: 2px solid var(--primary-color);
 }
 
-.card-flip__back p {
+.card-flip__back p,
+.card-flip__back a {
   font-size: 0.9rem;
   padding: var(--spacing-md);
   line-height: 1.4;
 }
+
 
 .card-flip__description {
   display: flex;
@@ -709,7 +711,8 @@ footer {
     font-size: 1.25rem;
   }
 
-  .card-flip__back p {
+  .card-flip__back p,
+  .card-flip__back a {
     font-size: calc(var(--font-size-md) * 1.3);
   }
 }

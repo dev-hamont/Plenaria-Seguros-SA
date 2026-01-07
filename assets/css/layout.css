@@ -316,7 +316,29 @@
   line-height: 1.4;
 }
 
+.cta-icon {
+  justify-content: space-between;
+}
 
+.cta-icon__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  background-color: white;
+  color: var(--primary-color);
+
+  font-size: 2.2rem;
+  transition: transform 0.2s ease;
+}
+
+.cta-icon__link:hover {
+  transform: scale(1.1);
+}
 
 
 /* RESPONSIVE */
